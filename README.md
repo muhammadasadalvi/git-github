@@ -1,3 +1,10 @@
+# GIT
+Git is VCS, and it stores files as continous snapshots.
+There are three main states of your files in **Git**
+1. modified
+2. stages
+3. commited
+
 # GIT BASICS
 1. you can initialize repository by cloning or **git init** command.
 ## Initializing git repository
