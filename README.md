@@ -37,3 +37,38 @@ There are three main states of your files in **Git**
 26.  __since and --untill__ are very useful.
 27. __git log --since=2.weeks__
 28.  ### Undoing Things
+29.  
+30.  Undo all changes made to the file and revert back to previous commit version.
+~~~
+git checkout - - <file_name>
+~~~
+31.  Unstaging a staged file with Git restore command
+~~~
+git restore --staged fileName
+~~~
+32. Undo or discard changes using checkout command
+~~~
+git checkout <fileName>
+~~~
+33. Unmodifying a Modified File with git restore
+~~~
+git restore fileName
+~~~
+34. __Origin__ is the default name given by git to the repository you have cloned from. To show all remotes use:
+~~~ 
+git remote -v 
+~~~
+35. Adding Remote Git Repositories
+~~~
+git remote add name http://github.com/etc
+~~~
+36.  Git fetch origin branch ( fetch the changes then we merge the branch) git pull fetch and merge both. 
+37.  git push origin master
+38.  show origin => git remote show origin
+39. __renaming and removing remotes__
+~~~
+git remote rename oldName newName
+git remote remove remoteBranchName
+~~~
+### Git Aliases
+
