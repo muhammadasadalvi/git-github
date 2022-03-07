@@ -77,5 +77,29 @@ git config --global.co checkout
 git config --global.ci commit
 git config --global.br branch
 ~~~
-
+# Branching
+## create New Branch
+1. Creating new branch mean create new pointer on the same commit you'r on.
+~~~
+git branch branchName
+~~~
+[branching Image](https://i.ibb.co/QpHsPWB/2022-03-07-17-02.png)
+2. **HEAD** is the pointer which shows current branch.
+## Switching Branches
+~~~
+ git checkout branchName
+~~~
+1. If you want to commit all changes then run - this will add and commit files (not recommended)
+~~~
+git commit -a -m "made a change"
+~~~
+2. You can create and checkout branch at the same time by using following command:
+~~~
+git checkout -b <branchName>
+~~~
+3. switch can be used to switch branch
+~~~
+git switch branchName
+git switch -c branchName
+~~~
 
