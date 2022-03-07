@@ -71,4 +71,11 @@ git remote rename oldName newName
 git remote remove remoteBranchName
 ~~~
 ### Git Aliases
+Make your own aliases and use them instead of writing long commands each time.
+~~~
+git config --global.co checkout
+git config --global.ci commit
+git config --global.br branch
+~~~
+
 
