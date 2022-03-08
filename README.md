@@ -102,4 +102,52 @@ git checkout -b <branchName>
 git switch branchName
 git switch -c branchName
 ~~~
+__Origin : the default name Git gives to the server you cloned from__
+**Merging**
+~~~
+git checkout targetBranch
+git merge sourceBranch
+~~~
+**Delete the branch**
+~~~
+git branch -d branchName
+~~~
+**branch details**
+~~~
+git branch 
+git branch (--merged || --no-merged)
+~~~
+**Change Branch Name**
+~~~
+git branch --move bad-branch-name correct-branch-name
+~~~
+to Push branch corrected branch name push it. 
+~~~
+git push --set-upstream origin corrected-branch-name
+~~~
+**Pushing**
+when you want to know the branch to the world, you need to push the branch to the repository where you have write access.
+~~~
+git push <remote> <branch>
+~~~
+This mean take my local branch to the server and make it remote branch.
+**tracking branches**
+**Setup Local Branch to Remote**
+~~~
+git branch -u origin/serverfix
+~~~
+**to check which tacking branches you setup**
+~~~
+git branch -vv
+~~~
+### Pulling 
+~~~
+git pull
+~~~
+1. it fetches from remote server and merge it.
 
+```
+While the git fetch command will fetch all the changes on the server that you don’t have yet, it will not modify your working directory at all. It will simply get the data for you and let you merge it yourself. However, there is a command called git pull which is essentially a git fetch immediately followed by a git merge in most cases. If you have a tracking branch set up as demonstrated in the last section, either by explicitly setting it or by having it created for you by the clone or checkout commands, git pull will look up what server and branch your current branch is tracking, fetch
+from that server and then try to merge in that remote branch.
+Generally it’s better to simply use the fetch and merge commands explicitly as the magic of git pull can often be confusing.
+```
